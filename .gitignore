@@ -216,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ===============================
+# Edge2Cloud-HRV-Validator
+# ===============================
+
+# Resultados generados automáticamente
+resultados/
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Excel temporales
+~$*.xlsx
+~$*.docx
+
+# Sistema Windows
+Thumbs.db
+Desktop.ini
