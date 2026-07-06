@@ -14,11 +14,11 @@ Validar la información mostrada por Garmin Edge a partir de archivos RAW y foto
 
 \- \[x] Crear estructura básica del proyecto
 
-\- \[ ] Revisar main.py
+\- \[x] Revisar main.py
 
-\- \[ ] Revisar modulo\_raw.py
+\- \[x] Revisar modulo\_raw.py
 
-\- \[ ] Ejecutar primera prueba local
+\- \[x] Ejecutar primera prueba local
 
 
 
