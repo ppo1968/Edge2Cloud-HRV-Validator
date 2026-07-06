@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Edge2Cloud-HRV-Validator
+message: "If you use this software, please cite it."
+type: software
+
+authors:
+  - family-names: Pino-Ortega
+    given-names: José
+
+version: 0.1.0
+license: MIT
+
+repository-code: https://github.com/ppo1968/Edge2Cloud-HRV-Validator
