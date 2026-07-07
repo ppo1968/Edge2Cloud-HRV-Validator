@@ -1,0 +1,8 @@
+# Proyecto Edge2Cloud-HRV-Validator
+Datos/
+Resultados/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/

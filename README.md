@@ -1,128 +1,65 @@
-# Edge2Cloud-HRV-Validator
+# Edge2Cloud-HRV-Validator v0.4.4
 
-<div align="center">
+Versión centrada en el **Importador Universal RAW**.
 
-## Open-Source Framework for Validating Heart Rate Variability (HRV) Processing Between Edge and Cloud
+## Estructura de entrada
 
-**Version:** 0.1 (Development)
+Coloca los archivos CSV o Excel en:
 
-</div>
-
----
-
-# Overview
-
-Edge2Cloud-HRV-Validator is an open-source scientific framework designed to evaluate the agreement between Heart Rate Variability (HRV) metrics calculated directly on Edge devices and the same metrics recalculated from raw RR interval data in the Cloud.
-
-The framework has been developed to provide an automated, transparent and reproducible quality-control process for HRV applications.
-
----
-
-# Main Features
-
-- Automatic OCR extraction from HRV screenshots.
-- Automatic processing of RR interval files.
-- Edge vs Cloud comparison.
-- Quality-control assessment.
-- Automatic Excel reports.
-- Automatic scientific reports.
-- Batch processing of multiple subjects.
-- Reproducible workflow.
-
----
-
-# Workflow
-
-```
-Edge Device
-      │
-      ▼
- Screenshot (PNG/JPG)
-      │
-      ▼
- OCR Extraction
-      │
-      ▼
- Edge Results
-      │
-      ▼
- Comparison
-      ▲
-      │
- Raw RR intervals
-      │
-      ▼
- Cloud Recalculation
+```text
+data/input/cloud_raw
+data/input/wimu_raw
 ```
 
----
+Formatos admitidos:
 
-# Current Modules
-
-| Module | Status |
-|---------|--------|
-| OCR extraction | ✅ |
-| Automatic Excel | ✅ |
-| Folder management | ✅ |
-| RAW processing | 🚧 |
-| Edge vs Cloud comparison | 🚧 |
-| Dashboard | 🚧 |
-| Scientific report | 🚧 |
-
----
-
-# Folder Structure
-
-```
-Edge2Cloud-HRV-Validator
-│
-├── main.py
-├── modulos
-├── demo
-├── docs
-├── resultados
-├── imagenes
-└── raw
+```text
+.csv
+.txt
+.tsv
+.xlsx
+.xls
 ```
 
----
+## Uso
 
-# Future Development
+Modo menú:
 
-- Bland–Altman analysis
-- ICC calculation
-- RMSE
-- Bias
-- Dashboard
-- Automatic validation reports
-- Scientific quality indicators
+```bash
+python main.py
+```
 
----
+Opción:
 
-# Authors
+```text
+7. Importar RAW CSV/Excel a RRSeries
+```
 
-José Pino-Ortega
+Modo directo:
 
-Faculty of Sport Sciences
+```bash
+python main.py --import-raw
+```
 
-University of Murcia
+## Salidas
 
-Spain
+```text
+data/processed/raw_imports/raw_import_audit.xlsx
+data/processed/raw_imports/rr_series_normalizadas.xlsx
+data/processed/raw_imports/*_rr_normalizado.csv
+data/processed/raw_imports/*_rr_metadata.json
+```
 
----
+## Qué hace
 
-# License
+- Lee CSV, TXT, TSV, XLSX y XLS.
+- Detecta separadores de CSV automáticamente.
+- Revisa todas las hojas de Excel.
+- Detecta columnas RR/IBI/NN/intervalos.
+- Convierte segundos a milisegundos cuando procede.
+- Genera una serie interna normalizada `RRSeries`.
+- No calcula HRV todavía.
 
-MIT License
+## Regla científica
 
----
-
-# Citation
-
-If you use this software in your research, please cite the corresponding publication (coming soon).
-
----
-
-# Project Status
-
-🚧 Under active development.
+El motor HRV solo trabajará sobre `RRSeries`. Así se usará el mismo algoritmo para Cloud RAW y WIMU RAW.

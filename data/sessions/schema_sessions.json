@@ -1,0 +1,27 @@
+{
+  "version": "0.4.1_refactor_limpieza_segura",
+  "unit": "session",
+  "sources": [
+    "EDGE_APP_OCR",
+    "CLOUD_RAW_CALCULADO",
+    "WIMU_RAW_CALCULADO",
+    "SPRO_CALCULADO"
+  ],
+  "hrv_variables": [
+    "HR_bpm",
+    "RMSSD_ms",
+    "LnRMSSD",
+    "RR_medio_ms",
+    "SDNN_ms",
+    "SD1_ms",
+    "SD2_ms",
+    "indice_estres",
+    "frecuencia_respiratoria_resp_min",
+    "LF_ms2",
+    "HF_ms2",
+    "LF_nu_pct",
+    "HF_nu_pct",
+    "LF_HF_ratio"
+  ],
+  "created": "2026-07-07T13:20:00"
+}
